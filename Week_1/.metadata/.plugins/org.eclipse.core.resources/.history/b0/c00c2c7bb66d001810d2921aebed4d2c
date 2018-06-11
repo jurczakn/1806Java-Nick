@@ -1,0 +1,52 @@
+package com.revature.flow;
+
+public class FlowControl {
+	
+	public void ifMethod(boolean input, int x){
+		
+		if(input){
+			System.out.println("it was true");
+		}
+		
+		if(!(5 < x)){
+			System.out.println("x is large enough");	
+		}
+		else if(5 == x){
+			System.out.println("just barely");
+		}
+		else{
+			System.out.println("x is too small");
+		}
+		
+	}
+	
+	public void switchMethod(String s){
+		
+		switch(s){
+		
+		case "yes": 
+			System.out.println("ok");
+			break;
+		case "no":
+			System.out.println("why not");
+			break;
+		case "fallthrough":
+			System.out.println("why did you do this");
+		default:
+			System.out.println("this is for everything else");
+		
+		}
+		
+	}
+	
+	public void loopMethod(int x, String s){
+		
+		for (int i = 0; i < x; i++){
+			
+			System.out.println(i);
+			
+		}
+		
+	}
+
+}

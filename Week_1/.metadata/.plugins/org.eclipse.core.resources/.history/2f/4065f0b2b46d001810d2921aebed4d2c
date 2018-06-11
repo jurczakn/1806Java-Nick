@@ -1,0 +1,14 @@
+package com.revature;
+
+public class Driver {
+	
+	static public void main(String pirateSounds[]){
+		
+		
+		System.out.println(pirateSounds[0]);
+		System.out.println(pirateSounds[1]);
+		System.out.print("Hello World!");
+		
+	}
+
+}
