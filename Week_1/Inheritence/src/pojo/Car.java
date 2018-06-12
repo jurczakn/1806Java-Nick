@@ -4,6 +4,14 @@ import java.io.Serializable;
 
 public class Car implements Serializable{
 	
+	public static final int WHEELS = 4;
+	
+	public static final int HEADLIGHTS = 2;
+	
+	public double gas = 0;
+	
+	public double tankSize = 15;
+	
 	private int gears;
 	
 	private double speed;
@@ -11,6 +19,17 @@ public class Car implements Serializable{
 	private int doors;
 	
 	private String color;
+
+	public void openDoors(){
+		
+		System.out.println("I am opening the doors, it is very boring to watch");
+		
+	}
+	
+	Car doOverride(){
+		System.out.println("This method is to be overriden");
+		return this;
+	}
 	
 	public Car(){
 		super();
