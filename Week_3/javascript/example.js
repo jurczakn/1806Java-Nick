@@ -68,3 +68,61 @@ function incrementA(x){
     var y =  x + 5; 
 
 }
+
+try {
+
+    throw new Error("This is an error");
+
+}
+
+catch(e){
+
+    console.log(e.message);
+
+}
+
+//throw new Error("will this break");
+
+//null.f;
+
+console.log("Maybe");
+
+var sumNum = function (x, y, z){
+
+    console.log("inside 3 param function");
+    return x + y + z;
+
+} 
+
+sumNum = function (x, y){
+
+    console.log("x:" + x);
+    console.log("y:" + y);
+    console.log("inside 2 param function");
+    let returnValue = 0;
+    for (i in arguments){
+
+        returnValue += arguments[i];
+
+    }
+    return returnValue;
+
+}
+
+var Book = function(){};
+Book.prototype.read = function(){ console.log("I am reading a book");};
+
+var myBook = new Book();
+
+var TextBook = function(){};
+TextBook.prototype = new Book();
+
+myTextBook = new TextBook();
+
+Book.prototype.burn = function(){ console.log("I am either really cold or really hate the spread of information");};
+
+TextBook.prototype.read = function(){ console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");};
+
+Book = null;
+
+/* */
