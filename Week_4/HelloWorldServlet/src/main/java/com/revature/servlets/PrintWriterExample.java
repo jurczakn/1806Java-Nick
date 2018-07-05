@@ -20,6 +20,7 @@ public class PrintWriterExample extends HttpServlet{
     "<h3 id=\"pokemansName\"></h3>");
 		//writer.flush();
 		
+		
 	}
 
 }
