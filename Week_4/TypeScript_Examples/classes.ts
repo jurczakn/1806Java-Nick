@@ -2,7 +2,7 @@
 //in angular classes are used for component, services, directives, pipes, and many others
 
 
-class Car{
+export class Car { //allows us to use in other TypeScript files
 
     //fields
     engineName: string;
