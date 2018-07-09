@@ -1,0 +1,105 @@
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{title}}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Interpoliation {{interpolationNotation}}
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Used for
+                    <strong> one-way</strong> databinding to a
+                    <strong>value</strong>
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Can also be used to
+                    <strong>evaluate</strong> TS expressions
+                </span>
+            </div>
+
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    21 + 55
+                    <strong>=</strong> {{21+55}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">
+            Property Binding {{propertyBindingNotation}}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Changes the attributes of a node on the changes of a property
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Used for
+                    <strong> one-way</strong> databinding to a
+                    <strong>value</strong>
+                </span>
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <div [ngStyle]='objectStyle' (click)="changeStyles()">
+                    Check me out
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Event Binding {{eventBindingNotation}}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Used for event handling
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Click the button to increment the value: {{counter}}
+                </span>
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <div (click)="addToCounter()">
+                    <button class="btn btn-primary btn-center">increment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">Two-Way Binding {{twoWayBindingNotation}}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Can have HTML effect value in TS, and TS effect value in HTML
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Uses syntax: {{ngModelNotation}} = 'valueFromTypeScript'
+                </span>
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <input type="text" [(ngModel)]="twoWayValue"/>
+                <button class="btn btn-primary" (click)='clearInput()'>Clear</button>
+            </div>
+            <div class="list-group-item">
+                {{twoWayValue}}
+            </div>
+        </div>
+    </div>
+</div>

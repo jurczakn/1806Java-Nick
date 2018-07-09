@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-databinding',
@@ -11,11 +12,21 @@ export class DatabindingComponent implements OnInit {
 
   interpolationNotation = '{{}}';
 
-  title = 'Interpolation';
+  title = 'String Interpolation';
 
   propertyBindingNotation = '[]';
 
   twoWayBindingNotation = '[{}]';
+
+  twoWayValue = 'anything';
+
+  ngModelNotation = '[(ngModel)]';
+
+  public clearInput() {
+
+    this.twoWayValue = '';
+
+  }
 
   public objectStyle = {
 
@@ -24,7 +35,7 @@ export class DatabindingComponent implements OnInit {
     cursor: 'pointer',
     margin: '2px'
 
-  }
+  };
 
   eventBindingNotation = '()';
 
@@ -43,10 +54,10 @@ export class DatabindingComponent implements OnInit {
       this.objectStyle.color = 'green';
       this.objectStyle.border = '3px groove purple';
 
-    } else if (this.objectStyle.color === 'green'){
+    } else if (this.objectStyle.color === 'green') {
             this.objectStyle.color = 'blue';
             this.objectStyle.border = '3px ridge yellow';
-    } else if(this.objectStyle.color === 'blue'){
+    } else if (this.objectStyle.color === 'blue'){
             this.objectStyle.color = 'red';
             this.objectStyle.border = '3px solid black';
           }
