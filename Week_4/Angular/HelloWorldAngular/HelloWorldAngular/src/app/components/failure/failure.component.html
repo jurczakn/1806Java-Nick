@@ -1,0 +1,7 @@
+<ngb-alert *ngIf="!closed" (close) = "closeMessage()">
+  <h4 class="alert-heading">Finish Him</h4>
+  <blockquote>
+    <p>{{message}}</p>
+    <footer class="blockquote-footer">{{detailedText}}</footer>
+  </blockquote>
+</ngb-alert>
