@@ -1,0 +1,7 @@
+Search: <input [(ngModel)]="searchTerm" type="text"/>
+
+<div *ngFor="let s of superPowers | powersFilter: searchTerm" [ngStyle]="getStyle()">
+
+    <h4>{{s | uppercase}}</h4>
+
+</div>

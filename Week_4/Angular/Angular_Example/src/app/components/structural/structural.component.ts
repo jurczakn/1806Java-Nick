@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-structural',
@@ -11,7 +12,15 @@ export class StructuralComponent implements OnInit {
 
   documentation = 'https://angular.io/guide/structural-directives';
 
-  arrayOfThings = ['happy', 'sad', 'indifferent'];
+  arrayOfThings = ['happy', 'sad', 'indifferent', 'another thing'];
+
+  userInput: string;
+
+  public addElement(): void {
+
+    this.arrayOfThings.push(this.userInput);
+
+  }
 
   constructor() { }
 

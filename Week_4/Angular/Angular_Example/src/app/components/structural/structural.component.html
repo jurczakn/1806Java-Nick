@@ -1,4 +1,47 @@
 <div>
     <div class="panel-heading">
-        <span class="label label-default label-center"></span>
+        <span class="label label-default label-center">{{title}}</span>
     </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Change the physical
+                    <strong>structure</strong> of the
+                    <strong>html</strong>
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Always begin with the
+                    <strong>*</strong> character
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    Includes the
+                    <strong>*ngIf </strong>
+                    <strong>*ngFor </strong>
+                    <strong>*ngSwitch </strong>
+                </span>
+            </div>
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                    <input [(ngModel)] = "userInput" type="text" placeholder = "new value"/>
+                    <button class="btn btn-primary" (click)="addElement()">Add Element</button>
+                </span>
+            </div>
+            <div class="list-group-item list-group-item-demo">
+                <div *ngFor="let x of arrayOfThings; let i=index">
+                    <div class="list-group-item">
+                        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+                            <strong>{{i + 1}}</strong>: {{x}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+            </div>
+        </div>
+    </div>
+</div>

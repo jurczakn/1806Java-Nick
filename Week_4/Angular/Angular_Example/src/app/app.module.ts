@@ -27,6 +27,7 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { PipesComponent } from './components/pipes/pipes.component';
 import { StructuralComponent } from './components/structural/structural.component';
 import { FormsModule } from '../../node_modules/@angular/forms';
+import { PowersFilter } from './pipes/powers-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { FormsModule } from '../../node_modules/@angular/forms';
     ServiceComponent,
     DatabindingComponent,
     PipesComponent,
-    StructuralComponent
+    StructuralComponent,
+    PowersFilter
   ],
   imports: [
     BrowserModule,
