@@ -12,6 +12,7 @@ import { LoggingService } from './services/logging.service';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonService } from './services/pokemon.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
     BrowserModule,
     FormsModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [LoggingService, PokemonService],
   bootstrap: [AppComponent]

@@ -28,6 +28,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { StructuralComponent } from './components/structural/structural.component';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { PowersFilter } from './pipes/powers-filter.pipe';
+import { HttpComponent } from './components/http/http.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PowersFilter } from './pipes/powers-filter.pipe';
     DatabindingComponent,
     PipesComponent,
     StructuralComponent,
-    PowersFilter
+    PowersFilter,
+    HttpComponent
   ],
   imports: [
     BrowserModule,

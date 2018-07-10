@@ -22,6 +22,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { StructuralComponent } from './components/structural/structural.component';
+import { HttpComponent } from './components/http/http.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -43,7 +44,8 @@ export const routes: Routes = [
   { path: 'service',  component: ServiceComponent },
   { path: 'databinding', component: DatabindingComponent},
   { path: 'pipes', component: PipesComponent},
-  { path: 'structural', component: StructuralComponent}
+  { path: 'structural', component: StructuralComponent},
+  { path: 'http', component: HttpComponent }
 ];
 
 @NgModule({
