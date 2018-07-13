@@ -1,5 +1,8 @@
 package com.revature.driver;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -32,6 +35,10 @@ public class Driver {
 		Bear panda = (Bear) s.get(Bear.class, 150);
 		System.out.println(panda.getBearHome());
 		System.out.println("done");
+		Query query = s.getNamedQuery("@HQL_GET_ALL_BEARS");
+		List<Bear> bears = query.list();
+		query = s.getNamedQuery("@SQL_GET_ALL_BEARS");
+		bears = query.list();
 		tx.commit();
 		ConnectionUtil.closeFactory();
 		

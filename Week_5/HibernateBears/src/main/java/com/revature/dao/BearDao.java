@@ -15,5 +15,7 @@ public interface BearDao {
 	public void updateBear(Bear bear);
 	
 	public void removeBear(Bear bear);
+	
+	public void feedBear(int bearId, double fat);
 
 }

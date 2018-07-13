@@ -16,9 +16,17 @@
 		<!-- Type of DB Dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 
+		<!-- Level 2 Cache -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<!-- Specify Caching Provider -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
 		<!-- Mapped Classes -->
-		<mapping class="com.revature.pojos.HoneyPot" />
+		<!-- <mapping class="com.revature.pojos.HoneyPot" /> -->
 		<mapping class="com.revature.pojos.Cave"/>
 		<mapping class="com.revature.pojos.Bear"/>
+		
+		<!--  For mapping with xml -->
+		<mapping resource="honeypot.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

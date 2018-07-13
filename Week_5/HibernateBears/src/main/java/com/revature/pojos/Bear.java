@@ -13,12 +13,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="BEAR")
+@NamedQueries({ @NamedQuery(name="@HQL_GET_ALL_BEARS", query = "FROM Bear")})
+@NamedNativeQueries({@NamedNativeQuery(name = "@SQL_GET_ALL_BEARS", query = "SELECT * FROM BEAR")})
 public class Bear {
 	
 	@Id
