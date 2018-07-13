@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Conviguration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- DataSource Info -->
+		<!-- Url -->
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<!-- Username/Password -->
+		<property name="hibernate.connection.username">BANK_DB</property>
+		<property name="hibernate.connection.password">PASSWORD</property>
+		<!-- Driver -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+
+		<!-- Type of DB Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+		<!-- Mapped Classes -->
+		<mapping class="com.revature.pojos.HoneyPot" />
+		<mapping class="com.revature.pojos.Cave"/>
+		<mapping class="com.revature.pojos.Bear"/>
+	</session-factory>
+</hibernate-configuration>
