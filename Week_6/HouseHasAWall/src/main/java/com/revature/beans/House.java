@@ -1,9 +1,18 @@
 package com.revature.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component(value="myHouse")
+@Scope("prototype")
 public class House {
 
 	private String name;
 	
+	@Autowired
+	@Qualifier("myWall")
 	private WallInterface wall;
 
 	public House() {

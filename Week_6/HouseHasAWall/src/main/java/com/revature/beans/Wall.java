@@ -1,5 +1,8 @@
 package com.revature.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component("myWall")
 public class Wall implements WallInterface{
 	
 	private String material = "Wood";

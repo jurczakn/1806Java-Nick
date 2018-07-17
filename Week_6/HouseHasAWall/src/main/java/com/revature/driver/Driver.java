@@ -12,9 +12,9 @@ public class Driver {
 		
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
 		
-		House h = (House) ac.getBean("house");
+		House h = (House) ac.getBean("myHouse");
 		
-		House h2 = (House) ac.getBean("house");
+		House h2 = (House) ac.getBean("myHouse");
 		
 		h2.setName("My House");
 		
