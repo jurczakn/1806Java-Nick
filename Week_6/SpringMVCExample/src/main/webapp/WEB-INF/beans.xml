@@ -12,6 +12,9 @@
 	<!-- Search for @Controller, @RequestMapping, etc. -->
 	<mvc:annotation-driven/>
 	
+	<!--  Tell DispatcherServlet where are our Static Resources -->
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	
 	<!-- Configure ViewResolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">

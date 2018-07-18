@@ -12,5 +12,6 @@
 		Welcome
 		<c:out value="${ user.username }"></c:out>
 	</h1>
+	<a href="help">Get Help</a>
 </body>
 </html>

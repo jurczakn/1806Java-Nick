@@ -17,12 +17,18 @@
 		<h3>Please Login</h3>
 	</div>
 	
+	<c:if test="${errorMessage != null }">
+		<div><strong>${ errorMessage }</strong></div>
+	</c:if>
+	
 	<form:form action="Login" method="post" commandName="user">
 		<form:input path="username" class="form-control"
 			placeholder="Username" />
+		<form:errors path="username" element="div"></form:errors>
 		<br>
 		<form:input path="password" class="form-control"
 			placeholder="Password"/>
+		<form:errors path="password" element="div"></form:errors>
 		<br>
 		<input type="submit" value="login"/>
 			

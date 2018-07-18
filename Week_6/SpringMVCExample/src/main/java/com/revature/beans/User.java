@@ -1,9 +1,16 @@
 package com.revature.beans;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class User {
 	
+	@NotEmpty(message="Please enter a username")
+	@Size(min=4, max=15, message="Username must be between 4 and 15 characters")
 	private String username;
 	
+	@NotEmpty(message="Please enter a password")
 	private String password;
 
 	public User() {
