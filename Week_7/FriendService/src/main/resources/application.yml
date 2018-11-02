@@ -1,0 +1,17 @@
+#Friend microservice configuration
+spring:
+  application:
+    name: friend
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:testdb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 10001
+  
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: zuul
+    
+server:
+  port: 10000
+  
+#---Local Routes
+
+#Full Discovery Routes through Eureka
+zuul:
+  routes:
+    friend:
+#      url: http://localhost:10001
+      service-id: friend
+      path: /friend/**
+    hobbie:
+#      url: http://localhost:10002
+      service-id: hobbie
+      path: /hobbie/**   
+      
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}

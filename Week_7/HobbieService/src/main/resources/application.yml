@@ -1,0 +1,11 @@
+#Hobbie Service Configuration
+spring:
+  application:
+    name: Hobbie
+server:
+  port: 10002
+  
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}
